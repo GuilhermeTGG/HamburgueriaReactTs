@@ -1,3 +1,4 @@
+import { SearchIcon } from "../../assets/icons";
 import Menu from "../../components/Menu";
 import * as Styled from "./styles";
 
@@ -5,16 +6,17 @@ const Home = () => {
   return (
     <Styled.HomeContainer>
       <Menu path="home" />
-      <div className="home-content">
-        <header>
+      <Styled.HomeContentContainer>
+        <Styled.HomeContentHeader>
           <div>
             <h1>Burguer Fresh</h1>
             <p>{Date.now()}</p>
           </div>
           <div>
-            <img alt="search-icon" />
+            <SearchIcon />
+            <input />
           </div>
-        </header>
+        </Styled.HomeContentHeader>
         <section>
           <div>
             <p>Lanches</p>
@@ -33,7 +35,7 @@ const Home = () => {
             <div>Card</div>
           </div>
         </section>
-      </div>
+      </Styled.HomeContentContainer>
       <aside>
         <header>
           <h2>Pedido 12</h2>
@@ -67,7 +69,7 @@ const Home = () => {
           <button>Continuar para o pagamento</button>
         </div>
       </aside>
-      </Styled.HomeContainer>
+    </Styled.HomeContainer>
   );
 };
 export default Home;
