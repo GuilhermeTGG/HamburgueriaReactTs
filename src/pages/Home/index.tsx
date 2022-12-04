@@ -2,20 +2,25 @@ import { SearchIcon } from "../../assets/icons";
 import Menu from "../../components/Menu";
 import * as Styled from "./styles";
 
+import { DateTime } from "luxon";
+
 const Home = () => {
+  const actualDate = DateTime.now();
+  const formatedDate = `${actualDate.weekdayShort} ${actualDate.day} ${actualDate.monthLong} ${actualDate.year}`;
+
   return (
     <Styled.HomeContainer>
       <Menu path="home" />
       <Styled.HomeContentContainer>
         <Styled.HomeContentHeader>
-          <div>
+          <Styled.TitleContainer>
             <h1>Burguer Fresh</h1>
-            <p>{Date.now()}</p>
-          </div>
-          <div>
+            <p>{formatedDate}</p>
+          </Styled.TitleContainer>
+          <Styled.SearchInputContainer>
             <SearchIcon />
-            <input />
-          </div>
+            <input placeholder="Procure pelo Sabor"/>
+          </Styled.SearchInputContainer>
         </Styled.HomeContentHeader>
         <section>
           <div>
