@@ -19,19 +19,30 @@ const Home = () => {
           </Styled.TitleContainer>
           <Styled.SearchInputContainer>
             <SearchIcon />
-            <input placeholder="Procure pelo Sabor"/>
+            <input placeholder="Procure pelo Sabor" />
           </Styled.SearchInputContainer>
         </Styled.HomeContentHeader>
         <section>
-          <div>
-            <p>Lanches</p>
-          </div>
-          <div>
+          <Styled.CategoriesNavigationBar>
+            <Styled.CategoriesNavigationButton active>
+              Lanches
+            </Styled.CategoriesNavigationButton>
+            <Styled.CategoriesNavigationButton>
+              Porções
+            </Styled.CategoriesNavigationButton>
+            <Styled.CategoriesNavigationButton>
+              Bebidas
+            </Styled.CategoriesNavigationButton>
+          </Styled.CategoriesNavigationBar>
+          <Styled.ProductsHeaderContainer>
             <h2>Ecolha seu Lanche</h2>
-            <select>
+            <Styled.TableSelect defaultValue="">
+              <option value="" disabled>Selecione a mesa</option>
               <option value="1">1</option>
-            </select>
-          </div>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </Styled.TableSelect>
+          </Styled.ProductsHeaderContainer>
           <div className="list">
             <div>Card</div>
             <div>Card</div>
