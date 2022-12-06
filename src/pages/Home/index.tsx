@@ -1,8 +1,9 @@
 import { SearchIcon } from "../../assets/icons";
 import Menu from "../../components/Menu";
 import * as Styled from "./styles";
-
 import { DateTime } from "luxon";
+import { mockedProducts } from "../../mocks";
+import ProductsList from "../../components/ProductsList";
 
 const Home = () => {
   const actualDate = DateTime.now();
@@ -43,13 +44,7 @@ const Home = () => {
               <option value="3">3</option>
             </Styled.TableSelect>
           </Styled.ProductsHeaderContainer>
-          <div className="list">
-            <div>Card</div>
-            <div>Card</div>
-            <div>Card</div>
-            <div>Card</div>
-            <div>Card</div>
-          </div>
+          <ProductsList list={mockedProducts}/>
         </section>
       </Styled.HomeContentContainer>
       <aside>
