@@ -19,13 +19,14 @@ export const CardContainer = styled.div`
             position: relative;
             text-align: center;
             justify-content: center;
+            padding: 1rem;
             padding-top: 3rem;
             box-sizing: border-box;
 
             img {
                 width: 8rem;
                 position: absolute;
-                top: -3rem;
+                top: -3.5rem;
             }
   `}
 `

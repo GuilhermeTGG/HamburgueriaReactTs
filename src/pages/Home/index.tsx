@@ -4,8 +4,23 @@ import * as Styled from "./styles";
 import { DateTime } from "luxon";
 import { mockedProducts } from "../../mocks";
 import ProductsList from "../../components/ProductsList";
+import { mockedCategories } from "../../mocks";
+import { useState } from "react";
+import { Category, Product } from "../../types";
 
 const Home = () => {
+  const [selectedCategory, setSelectedCategory] = useState<Category>(
+    mockedCategories[0]
+  );
+
+  const filteredProducts: Product[] = mockedProducts.filter(
+    (element) => element.categoryId === selectedCategory.id
+  );
+
+  const handleChangeCategory = (category: Category) => {
+    setSelectedCategory(category);
+  };
+
   const actualDate = DateTime.now();
   const formatedDate = `${actualDate.weekdayShort} ${actualDate.day} ${actualDate.monthLong} ${actualDate.year}`;
 
@@ -25,26 +40,29 @@ const Home = () => {
         </Styled.HomeContentHeader>
         <section>
           <Styled.CategoriesNavigationBar>
-            <Styled.CategoriesNavigationButton active>
-              Lanches
-            </Styled.CategoriesNavigationButton>
-            <Styled.CategoriesNavigationButton>
-              Porções
-            </Styled.CategoriesNavigationButton>
-            <Styled.CategoriesNavigationButton>
-              Bebidas
-            </Styled.CategoriesNavigationButton>
+            {mockedCategories.map((element) => {
+              return (
+                <Styled.CategoriesNavigationButton
+                  active={element.name === selectedCategory.name}
+                  onClick={() => handleChangeCategory(element)}
+                >
+                  {element.name}
+                </Styled.CategoriesNavigationButton>
+              );
+            })}
           </Styled.CategoriesNavigationBar>
           <Styled.ProductsHeaderContainer>
             <h2>Ecolha seu Lanche</h2>
             <Styled.TableSelect defaultValue="">
-              <option value="" disabled>Selecione a mesa</option>
+              <option value="" disabled>
+                Selecione a mesa
+              </option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </Styled.TableSelect>
           </Styled.ProductsHeaderContainer>
-          <ProductsList list={mockedProducts}/>
+          <ProductsList list={filteredProducts} />
         </section>
       </Styled.HomeContentContainer>
       <aside>
