@@ -12,7 +12,7 @@ interface MenuItemButtonProps {
 export const MenuContainer = styled.div`
   width: 6.5rem;
   height: 100vh;
-  border-radius: 16px;
+  border-radius: 0 16px 16px 0;
   background-color: #1f1d2b;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@ export const MenuContainer = styled.div`
     margin: 1.25rem 0;
   }
   nav{
-    width 100%;
+    width: 100%;
   }
 `;
 
@@ -58,7 +58,7 @@ export const MenuItemButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 12px;
+  margin-right: 12px;
   background-color: #1f1d2b;
   border-radius: 8px;
   color: #6cea69;

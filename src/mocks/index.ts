@@ -132,19 +132,19 @@ export const mockedProducts: T.Product[] = [
 
 export const mockedCategories: T.Category[] = [
   {
-    id: "e7e77543-2515-4a5c-99f6-c8495ac45f0d",
+    id: "ef215c07-a2e4-495c-9e0f-5c10cc971d11",
     name: "Lanches",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    id: "265c2b49-564a-4a5a-a758-ef7263eb2e9e",
+    id: "a6e86fe9-ca7f-40a3-9b95-331e749038f1",
     name: "Porções",
     createdAt: new Date(),
     updatedAt: new Date(),
   },
   {
-    id: "f4dd96ac-33ea-4e95-bdd5-01e67e9af307",
+    id: "1c86eac1-f2b9-4bdf-8dc9-21bcd789da4f",
     name: "Bebidas",
     createdAt: new Date(),
     updatedAt: new Date(),
@@ -198,14 +198,14 @@ export const mockedUsers: T.User[] = [
 export const mockedFavorites: T.Favorite[] = [
   {
     id: "35abf7f1-c999-4bcf-abfb-a95cb483a2b9",
-    productName: "Burguer Salada",
-    userId: "64bb9795-bb33-4e0f-8344-87a57ff30047",
+    productName: "Burguer Salada e Queijo Especial",
+    userId: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
     favoritedAt: new Date(),
   },
   {
     id: "9a5a8f0e-43aa-4d77-8afd-e3a95deddc81",
-    productName: "Burguer Carne e Frango",
-    userId: "64bb9795-bb33-4e0f-8344-87a57ff30047",
+    productName: "Burguer Duplo Bacon e Cheddar",
+    userId: "6d6cf9d2-cf94-4b90-a53b-973d92501e02",
     favoritedAt: new Date(),
   },
 ];
