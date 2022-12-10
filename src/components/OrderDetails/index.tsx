@@ -1,3 +1,4 @@
+import Button from "../Button";
 import * as Styled from "./styles";
 
 const OrderDetails = () => {
@@ -6,11 +7,15 @@ const OrderDetails = () => {
       <Styled.OrderDetailsHeader>
         <h2>Pedido #12</h2>
         <div>
-          <button>Comer no Local</button>
-          <button>P/ Viagem</button>
-          <button>Delivery</button>
+          <Button
+            text="Comer no local"
+            onClick={() => {}}
+            size="small"
+          />
+          <Button text="P/ Viagem" onClick={() => {}} size="small" variant="disabled" />
+          <Button text="Delivery" onClick={() => {}} size="small" variant="disabled" />
         </div>
-        </Styled.OrderDetailsHeader>
+      </Styled.OrderDetailsHeader>
       <div>
         <div>
           <h3>Item</h3>
@@ -32,9 +37,13 @@ const OrderDetails = () => {
           <p>Sub total</p>
           <p>R$0.00</p>
         </div>
-        <button>Continuar para o pagamento</button>
+        <Button
+          text="Continue para o pagamento"
+          onClick={() => {}}
+          size="large"
+        />
       </div>
-      </Styled.OrderDetailsContainer>
+    </Styled.OrderDetailsContainer>
   );
 };
 

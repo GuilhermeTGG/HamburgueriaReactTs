@@ -7,6 +7,9 @@ ${({ theme }) => css`
     background-color: ${theme.colors.baseBg2};
     border-radius: 16px 0 0 16px;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `}
 `;
 
@@ -29,7 +32,7 @@ ${({ theme }) => css`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 2rem;
+        gap: 1rem;
     }
 `}
 `;
