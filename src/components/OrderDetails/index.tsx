@@ -1,5 +1,8 @@
+import toast from "react-hot-toast";
 import Button from "../Button";
+import CheckoutCard from "../CheckoutCard";
 import * as Styled from "./styles";
+import { mockedProducts } from "../../mocks";
 
 const OrderDetails = () => {
   return (
@@ -31,9 +34,8 @@ const OrderDetails = () => {
           <h3>Preço</h3>
         </Styled.CheckoutDetailsHeader>
         <Styled.CheckoutCardsContainer>
-          <div>Card Checkout</div>
-          <div>Card Checkout</div>
-          <div>Card Checkout</div>
+         <CheckoutCard product={mockedProducts[0]}/>
+         <CheckoutCard product={mockedProducts[1]}/>
           </Styled.CheckoutCardsContainer>
       </Styled.CheckoutDetailsContainter>
       <Styled.OrderDetailsFooter>
@@ -47,7 +49,7 @@ const OrderDetails = () => {
         </div>
         <Button
           text="Continue para o pagamento"
-          onClick={() => {}}
+          onClick={() => toast.error('Sessão em desenvolvimento!')}
           size="large"
         />
       </Styled.OrderDetailsFooter>
