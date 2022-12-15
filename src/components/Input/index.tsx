@@ -6,7 +6,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = ({ inputSize, ...props }: InputProps) => {
-  return <StyledInput inputSize={inputSize} />;
+  return <StyledInput inputSize={inputSize} {...props} />;
 };
 
 export default Input;
