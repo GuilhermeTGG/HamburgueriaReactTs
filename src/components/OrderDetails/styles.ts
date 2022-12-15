@@ -69,14 +69,14 @@ ${({ theme }) => css`
 
 export const OrderDetailsFooter = styled.footer`
 ${({ theme }) => css`
- width: 22.875rem;
- height: 14.875rem;
- border-top: 1px solid ${theme.colors.baseLine};
- position: absolute;
- bottom: 0;
- display: flex;
- flex-direction: column;
- justify-content: space-evenly;
+width: 22.875rem;
+    height: 14.875rem;
+    border-top: 1px solid ${theme.colors.baseLine};
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
  div {
     display: flex;

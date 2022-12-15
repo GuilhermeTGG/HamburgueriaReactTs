@@ -6,6 +6,7 @@ export const CheckoutCardContainer = styled.div`
     height: 6.625rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0.625rem;
   `}
 `;
 
@@ -37,11 +38,11 @@ export const CheckoutCardHeader = styled.div`
     }
 
     span {
-        min-width: 3.5rem;
-        padding-left: 1.25rem;
-        height: 100%;
-        display: flex;
-        align-items: center;
+      min-width: 3.5rem;
+      padding-left: 1.25rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
   `}
 `;
@@ -52,7 +53,7 @@ export const ProductQuantityInput = styled.input`
     width: 3rem;
     width: 3rem;
     background-color: ${theme.colors.baseBg1};
-    border: 1px solid  ${theme.colors.baseLine};
+    border: 1px solid ${theme.colors.baseLine};
     color: ${theme.colors.textColor};
     border-radius: 8px;
     text-align: center;
@@ -69,8 +70,8 @@ export const CheckoutCardFooter = styled.div`
 `;
 
 export const RemoveProductButton = styled.button`
- ${({ theme }) => css`
-  width: 3rem;
+  ${({ theme }) => css`
+    width: 3rem;
     height: 3rem;
     border-radius: 8px;
     text-align: center;
@@ -78,5 +79,5 @@ export const RemoveProductButton = styled.button`
     border: 1px solid ${theme.colors.secondaryColor};
     color: ${theme.colors.secondaryColor};
     cursor: pointer;
- `}
+  `}
 `;

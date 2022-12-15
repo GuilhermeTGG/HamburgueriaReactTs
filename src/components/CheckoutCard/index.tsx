@@ -4,6 +4,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { StyledButton } from "../Button/styles";
 import { TrashIcon } from "../../assets/icons";
+import Input from "../Input";
 
 interface CheckoutCardProps {
   product: Product;
@@ -30,10 +31,9 @@ const CheckoutCard = ({ product }: CheckoutCardProps) => {
         <span>R${(quantity * product.price).toFixed(2)}</span>
       </styled.CheckoutCardHeader>
       <styled.CheckoutCardFooter>
-        <input
+        <Input
           value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
+          onChange={(e) => setDescription(e.target.value)} placeholder="Detalhes do produto" />
         <styled.RemoveProductButton
           onClick={() => toast.error("Sessão em desenvolvimento!")}
         >
