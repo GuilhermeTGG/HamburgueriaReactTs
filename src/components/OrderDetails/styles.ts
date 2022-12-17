@@ -39,7 +39,7 @@ ${({ theme }) => css`
 `}
 `;
 
-export const CheckoutDetailsContainter = styled.div`
+export const CheckoutDetailsContainer = styled.div`
 ${({ theme }) => css`
     width: 100%;
     display: flex;
@@ -71,7 +71,6 @@ export const OrderDetailsFooter = styled.footer`
 ${({ theme }) => css`
 width: 22.875rem;
     height: 14.875rem;
-    border-top: 1px solid ${theme.colors.baseLine};
     position: absolute;
     bottom: 0;
     display: flex;
